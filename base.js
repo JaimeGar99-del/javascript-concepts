@@ -206,7 +206,6 @@ for (let indice = 0; indice < coder.length; indice++) {
     let estado = promedioActual >= 3 ? "Aprobado" : "Reprobado";
     
     console.log(`Promedio: ${promedioActual} - Estado: ${estado}`);
-    console.log("------------------------");
 
     if (promedioActual > promedioMasAlto) {
         promedioMasAlto = promedioActual;
@@ -214,12 +213,12 @@ for (let indice = 0; indice < coder.length; indice++) {
     }
 }
 
-function calcularPromedio(arrayDeNotas) {
+function calcularPromedio(notasindividuales) {
     let suma = 0;
-    for (let nota of arrayDeNotas) {
+    for (let nota of notasindividuales) {
         suma += nota;
     }
-    let resultado = suma / arrayDeNotas.length;
+    let resultado = suma / notasindividuales.length;
     return Math.round(resultado *100)/100;
 }
 
